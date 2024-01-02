@@ -1,993 +1,1015 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
-<meta name="author" content="">
+    <meta charset="utf-8">
+    <title>Arkitektur - Architecture HTML Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
 
-<!-- Favicons -->
-<link rel="shortcut icon" href="favicon.png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
 
-<title>SV Interior</title> 
+    <!-- Google Web Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Teko:wght@400;500;600&display=swap"
+        rel="stylesheet">
 
-<!-- Styles -->
-<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i|Poppins:300,400,500,600,700" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet" media="screen">
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/10.1.0/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/10.1.0/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/10.1.0/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/10.1.0/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/10.1.0/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/10.1.0/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/10.1.0/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/10.1.0/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/10.1.0/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/10.1.0/firebase-performance-compat.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
 </head>
+
 <body>
-<div class="animsition">
-  <div class="wrapper boxed">
-
-    <!-- Content CLick Capture-->
-
-    <div class="click-capture"></div>
-
-    <!-- Sidebar Menu-->
-
-    <div class="menu"> 
-      <span class="close-menu icon-cross2 right-boxed"></span>
-      <div class="menu-lang right-boxed">
-        <a href="" class="active">Eng</a>
-        <a href="">Fra</a>
-        <a href="">Ger</a>
-      </div>
-      <ul class="menu-list right-boxed">
-        <li class="active">
-          <a  href="index.html">Home</a>
-          <ul>
-            <li class="active"><a href="index.html">Classic</a></li>
-            <li><a href="home-fullpage.html">Full page</a></li>
-            <li><a href="../dark/index.html">Dark</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="works.html">Works</a>
-          <ul>
-            <!-- <li><a href="works-grid.html">Grid</a></li> -->
-            <!-- <li><a href="works-masonry.html">Masonry</a></li> -->
-            <li><a href="Design Ideas.html">Design Ideas</a></li>
-            <li><a href="project-detail.html">Project Detail</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="Finishes.html">Finishes</a>
-        </li>
-        <li>
-          <a href="career.html">Career</a>
-        </li>
-        <li>
-          <a href="#">Process</a>
-        </li>
-        <li>
-          <a href="contact.html">Book a consultation</a>
-        </li>
-        
-      </ul>
-      <div class="menu-footer right-boxed">
-        <div class="social-list">
-          <a href="" class="icon ion-social-twitter"></a>
-          <a href="" class="icon ion-social-facebook"></a>
-          <a href="" class="icon ion-social-googleplus"></a>
-          <a href="" class="icon ion-social-linkedin"></a>
-          <a href="" class="icon ion-social-dribbble-outline"></a>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border position-relative text-primary" style="width: 6rem; height: 6rem;" role="status">
         </div>
-        <div class="copy">© SV Interior 2023. All Rights Reseverd<br><a href="https://phoenixdigitalhub.in/"></a> Design by PHOENIX</div>
-      </div>
+        <img class="position-absolute top-50 start-50 translate-middle" src="img/SVlogo.png" alt="Icon">
     </div>
-
-    <!-- Navbar -->
-
-    <header class="navbar boxed js-navbar">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-
-      <a class="brand" href="#">
-        <img alt="" src="images/brand.png">
-      </a>
-
-      <div class="social-list hidden-xs">
-        <a href="" class="icon ion-social-twitter"></a>
-        <a href="" class="icon ion-social-facebook"></a>
-        <a href="" class="icon ion-social-googleplus"></a>
-        <a href="" class="icon ion-social-linkedin"></a>
-        <a href="" class="icon ion-social-dribbble-outline"></a>
-      </div>
-
-      <div class="navbar-spacer hidden-sm hidden-xs"></div>
-
-      <address class="navbar-address hidden-sm hidden-xs">call us: <span class="text-dark">+91 86520 88618</span></address>
-    </header>
-    
-    <!-- Jumbotron -->
-    
-    <main class="jumbotron">
-
-      <!-- Start revolution slider -->
-
-      <div class="rev_slider_wrapper">
-        <div id="rev_slider" class="rev_slider tp-overflow-hidden fullscreenbanner">
-          <ul>
-
-            <!-- Slide 1 -->
-
-            <li  data-transition='slideleft' data-slotamount='default'  data-masterspeed="1000" data-fsmasterspeed="1000">
-
-              <!-- Main image-->
-
-              <img src="images/slider/slide1.png" data-bgparallax="5"  alt="" data-bgposition="center 0" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg">
-
-              <!-- Layer 1 -->
-
-              <div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme" 
-                data-x="['left']" data-hoffset="['100']" 
-                data-y="['middle','middle','middle','middle']" data-voffset="['-250']" 
-                data-width="270"
-                data-height="5"
-                data-whitespace="nowrap"
-                data-type="shape" 
-                data-responsive_offset="on" 
-                data-frames='[{"from":"x:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;","speed":1000,"to":"o:1;","delay":0,"ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]'
-                data-textAlign="['left','left','left','left']"
-                data-paddingtop="[0,0,0,0]"
-                data-paddingright="[0,0,0,0]"
-                data-paddingbottom="[0,0,0,0]"
-                data-paddingleft="[0,0,0,0]"
-
-                style="background-color:#15758B;"> </div>
-
-              <!-- Layer 2 -->
-
-              <div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme" 
-                data-x="['left']" data-hoffset="['370']" 
-                data-y="['middle','middle','middle','middle']" data-voffset="['19']" 
-                data-width="5"
-                data-height="544"
-                data-whitespace="nowrap"
-                data-type="shape" 
-                data-responsive_offset="on" 
-                data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;","speed":1000,"to":"o:1;","delay":600,"ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]'
-                data-textAlign="['left','left','left','left']"
-                data-paddingtop="[0,0,0,0]"
-                data-paddingright="[0,0,0,0]"
-                data-paddingbottom="[0,0,0,0]"
-                data-paddingleft="[0,0,0,0]"
-                style="background-color:#15758B;"> </div>
-
-
-              <!-- Layer 3 -->
-
-              <div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme" 
-                data-x="['left']" data-hoffset="['100']" 
-                data-y="['middle','middle','middle','middle']" data-voffset="['289']" 
-                data-width="270"
-                data-height="5"
-                data-whitespace="nowrap"
-                data-type="shape" 
-                data-responsive_offset="on" 
-                data-frames='[{"from":"x:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;","speed":1000,"to":"o:1;","delay":1200,"ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]'
-                data-textAlign="['left','left','left','left']"
-                data-paddingtop="[0,0,0,0]"
-                data-paddingright="[0,0,0,0]"
-                data-paddingbottom="[0,0,0,0]"
-                data-paddingleft="[0,0,0,0]"
-
-                style="background-color:#15758B;"> </div>
-
-
-              <!-- Layer 4 -->
-
-              <div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme" 
-                data-x="['left']" data-hoffset="['100']" 
-                data-y="['middle','middle','middle','middle']" data-voffset="['19']" 
-                data-width="5"
-                data-height="544"
-                data-whitespace="nowrap"
-                data-type="shape" 
-                data-responsive_offset="on" 
-                data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;","speed":1000,"to":"o:1;","delay":1800,"ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]'
-                data-textAlign="['left','left','left','left']"
-                data-paddingtop="[0,0,0,0]"
-                data-paddingright="[0,0,0,0]"
-                data-paddingbottom="[0,0,0,0]"
-                data-paddingleft="[0,0,0,0]"
-                style="background-color:#15758B;"> </div>
-
-              <!-- Layer 5 -->
-
-              <div class="slider-title tp-caption tp-resizeme" 
-                data-x="['left']" data-hoffset="['156']"  
-                data-y="['middle','middle','middle','middle']" data-voffset="['-30']"
-                data-textAlign="['left']"
-                data-fontsize="['72', '63','57','50']"
-                data-lineheight="['72','68', '62','54']"
-                data-height="none"
-                data-whitespace="nowrap"
-                data-transform_idle="o:1;"
-                data-transform_in="x:[-155%];z:0;rX:0deg;rY:0deg;rZ:0deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power2.easeInOut;" 
-                data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-                data-mask_in="x:50px;y:0px;s:inherit;e:inherit;" 
-                data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
-                data-start="500" 
-                data-splitin="chars" 
-                data-splitout="none" 
-                data-responsive_offset="on" 
-                data-elementdelay="0.05" style="font-weight:600; letter-spacing:-0.05em;">The luxury<br> residence in<br> forest
-              </div>
-
-
-              <!-- Layer 6 -->
-
-              <div class="slider-title tp-caption" 
-                data-x="['left']" data-hoffset="['156']"  
-                data-y="['middle','middle','middle','middle']" data-voffset="['-170']"
-                data-textAlign="['left']"
-                data-fontsize="['18']"
-                data-lineheight="['20']"
-                data-height="none"
-                data-whitespace="nowrap"
-                data-transform_idle="o:1;"
-                data-transform_in="x:[155%];z:0;rX:0deg;rY:0deg;rZ:0deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power2.easeInOut;" 
-                data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-                data-mask_in="x:50px;y:0px;s:inherit;e:inherit;" 
-                data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
-                data-start="1000" 
-                data-splitin="chars" 
-                data-splitout="none" 
-                data-responsive_offset="on" 
-                data-elementdelay="0.05" style="font-weight:600; letter-spacing:0.1em; text-transform:uppercase;">Residential
-              </div>
-
-              <!-- Layer 7 -->
-
-              <div class="slider-title tp-caption" 
-                data-x="['left']" data-hoffset="['156']"  
-                data-y="['middle','middle','middle','middle']" data-voffset="['230']"
-                data-textAlign="['left']"
-                data-fontsize="['18']"
-                data-lineheight="['20']"
-                data-height="none"
-                data-whitespace="nowrap"
-                data-transform_idle="o:1;"
-                data-transform_in="x:[-105%];z:0;rX:0deg;rY:0deg;rZ:0deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power2.easeInOut;" 
-                data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-                data-mask_in="x:50px;y:0px;s:inherit;e:inherit;" 
-                data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
-                data-start="1500" 
-                data-splitin="none" 
-                data-splitout="none" 
-                data-responsive_offset="on" 
-                data-elementdelay="0.05" style="font-weight:600;">
-                  <a href="" class="link-arrow">See project <i class="icon ion-ios-arrow-thin-right"></i>
-                </a>
-              </div>
-            </li>
-
-            <!-- Slide 2 -->
-
-            <li  data-transition='slideleft' data-slotamount='default' data-masterspeed="1000" data-fsmasterspeed="1000">
-
-              <!-- Main image-->
-
-              <img src="images/slider/slide2.png"  data-bgparallax="5" alt="" data-bgposition="center 0" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg">
-
-              <!-- Layer 1 -->
-              <div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme" 
-                data-x="['left']" data-hoffset="['100']" 
-                data-y="['middle','middle','middle','middle']" data-voffset="['-250']" 
-                data-width="270"
-                data-height="5"
-                data-whitespace="nowrap"
-                data-type="shape" 
-                data-responsive_offset="on" 
-                data-frames='[{"from":"x:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;","speed":1000,"to":"o:1;","delay":0,"ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]'
-                data-textAlign="['left','left','left','left']"
-                data-paddingtop="[0,0,0,0]"
-                data-paddingright="[0,0,0,0]"
-                data-paddingbottom="[0,0,0,0]"
-                data-paddingleft="[0,0,0,0]"
-
-                style="background-color:#15758B;"> </div>
-
-              <!-- Layer 2 -->
-
-              <div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme" 
-                data-x="['left']" data-hoffset="['370']" 
-                data-y="['middle','middle','middle','middle']" data-voffset="['19']" 
-                data-width="5"
-                data-height="544"
-                data-whitespace="nowrap"
-                data-type="shape" 
-                data-responsive_offset="on" 
-                data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;","speed":1000,"to":"o:1;","delay":600,"ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]'
-                data-textAlign="['left','left','left','left']"
-                data-paddingtop="[0,0,0,0]"
-                data-paddingright="[0,0,0,0]"
-                data-paddingbottom="[0,0,0,0]"
-                data-paddingleft="[0,0,0,0]"
-                style="background-color:#15758B;"> </div>
-
-
-              <!-- Layer 3 -->
-
-              <div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme" 
-                data-x="['left']" data-hoffset="['100']" 
-                data-y="['middle','middle','middle','middle']" data-voffset="['289']" 
-                data-width="270"
-                data-height="5"
-                data-whitespace="nowrap"
-                data-type="shape" 
-                data-responsive_offset="on" 
-                data-frames='[{"from":"x:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;","speed":1000,"to":"o:1;","delay":1200,"ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]'
-                data-textAlign="['left','left','left','left']"
-                data-paddingtop="[0,0,0,0]"
-                data-paddingright="[0,0,0,0]"
-                data-paddingbottom="[0,0,0,0]"
-                data-paddingleft="[0,0,0,0]"
-
-                style="background-color:#15758B;"> </div>
-
-
-              <!-- Layer 4 -->
-
-              <div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme" 
-                data-x="['left']" data-hoffset="['100']" 
-                data-y="['middle','middle','middle','middle']" data-voffset="['19']" 
-                data-width="5"
-                data-height="544"
-                data-whitespace="nowrap"
-                data-type="shape" 
-                data-responsive_offset="on" 
-                data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;","speed":1000,"to":"o:1;","delay":1800,"ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]'
-                data-textAlign="['left','left','left','left']"
-                data-paddingtop="[0,0,0,0]"
-                data-paddingright="[0,0,0,0]"
-                data-paddingbottom="[0,0,0,0]"
-                data-paddingleft="[0,0,0,0]"
-                style="background-color:#15758B;"> </div>
-
-              <!-- Layer 5 -->
-
-              <div class="slider-title tp-caption tp-resizeme" 
-                data-x="['left']" data-hoffset="['156']"  
-                data-y="['middle','middle','middle','middle']" data-voffset="['-30']"
-                data-textAlign="['left']"
-                data-fontsize="['72', '63','57','50']"
-                data-lineheight="['72','68', '62','54']"
-                data-height="none"
-                data-whitespace="nowrap"
-                data-transform_idle="o:1;"
-                data-transform_in="x:[-155%];z:0;rX:0deg;rY:0deg;rZ:0deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power2.easeInOut;" 
-                data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-                data-mask_in="x:50px;y:0px;s:inherit;e:inherit;" 
-                data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
-                data-start="500" 
-                data-splitin="chars" 
-                data-splitout="none" 
-                data-responsive_offset="on" 
-                data-elementdelay="0.05" style="font-weight:600; letter-spacing:-0.05em;">Small<br> House Near<br> Wroclaw
-              </div>
-
-
-              <!-- Layer 6 -->
-
-              <div class="slider-title tp-caption" 
-                data-x="['left']" data-hoffset="['156']"  
-                data-y="['middle','middle','middle','middle']" data-voffset="['-170']"
-                data-textAlign="['left']"
-                data-fontsize="['18']"
-                data-lineheight="['20']"
-                data-height="none"
-                data-whitespace="nowrap"
-                data-transform_idle="o:1;"
-                data-transform_in="x:[155%];z:0;rX:0deg;rY:0deg;rZ:0deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power2.easeInOut;" 
-                data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-                data-mask_in="x:50px;y:0px;s:inherit;e:inherit;" 
-                data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
-                data-start="1000" 
-                data-splitin="chars" 
-                data-splitout="none" 
-                data-responsive_offset="on" 
-                data-elementdelay="0.05" style="font-weight:600; letter-spacing:0.1em; text-transform:uppercase;">House
-              </div>
-
-              <!-- Layer 7 -->
-
-              <div class="slider-title tp-caption" 
-                data-x="['left']" data-hoffset="['156']"  
-                data-y="['middle','middle','middle','middle']" data-voffset="['230']"
-                data-textAlign="['left']"
-                data-fontsize="['18']"
-                data-lineheight="['20']"
-                data-height="none"
-                data-whitespace="nowrap"
-                data-transform_idle="o:1;"
-                data-transform_in="x:[-105%];z:0;rX:0deg;rY:0deg;rZ:0deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power2.easeInOut;" 
-                data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-                data-mask_in="x:50px;y:0px;s:inherit;e:inherit;" 
-                data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
-                data-start="1500" 
-                data-splitin="none" 
-                data-splitout="none" 
-                data-responsive_offset="on" 
-                data-elementdelay="0.05" style="font-weight:600; ">
-                  <a href="" class="link-arrow">See project <i class="icon ion-ios-arrow-thin-right"></i>
-                </a>
-              </div>
-            </li>
-
-            <!-- Slide 3 -->
-
-            <li data-transition='slideleft' data-slotamount='default' data-masterspeed="1000" data-fsmasterspeed="1000">
-
-              <!-- Main image-->
-
-              <img src="images/slider/slide3.png"  data-bgparallax="5" alt="" data-bgposition="center 0" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg">
-
-              <!-- Layer 1 -->
-              <div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme" 
-                data-x="['left']" data-hoffset="['100']" 
-                data-y="['middle','middle','middle','middle']" data-voffset="['-250']" 
-                data-width="270"
-                data-height="5"
-                data-whitespace="nowrap"
-                data-type="shape" 
-                data-responsive_offset="on" 
-                data-frames='[{"from":"x:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;","speed":1000,"to":"o:1;","delay":0,"ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]'
-                data-textAlign="['left','left','left','left']"
-                data-paddingtop="[0,0,0,0]"
-                data-paddingright="[0,0,0,0]"
-                data-paddingbottom="[0,0,0,0]"
-                data-paddingleft="[0,0,0,0]"
-
-                style="background-color:#15758B;"> </div>
-
-              <!-- Layer 2 -->
-
-              <div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme" 
-                data-x="['left']" data-hoffset="['370']" 
-                data-y="['middle','middle','middle','middle']" data-voffset="['19']" 
-                data-width="5"
-                data-height="544"
-                data-whitespace="nowrap"
-                data-type="shape" 
-                data-responsive_offset="on" 
-                data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;","speed":1000,"to":"o:1;","delay":600,"ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]'
-                data-textAlign="['left','left','left','left']"
-                data-paddingtop="[0,0,0,0]"
-                data-paddingright="[0,0,0,0]"
-                data-paddingbottom="[0,0,0,0]"
-                data-paddingleft="[0,0,0,0]"
-                style="background-color:#15758B;"> </div>
-
-
-              <!-- Layer 3 -->
-              <div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme" 
-                data-x="['left']" data-hoffset="['100']" 
-                data-y="['middle','middle','middle','middle']" data-voffset="['289']" 
-                data-width="270"
-                data-height="5"
-                data-whitespace="nowrap"
-                data-type="shape" 
-                data-responsive_offset="on" 
-                data-frames='[{"from":"x:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;","speed":1000,"to":"o:1;","delay":1200,"ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]'
-                data-textAlign="['left','left','left','left']"
-                data-paddingtop="[0,0,0,0]"
-                data-paddingright="[0,0,0,0]"
-                data-paddingbottom="[0,0,0,0]"
-                data-paddingleft="[0,0,0,0]"
-
-                style="background-color:#15758B;"> </div>
-
-
-              <!-- Layer 4 -->
-
-              <div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme" 
-                data-x="['left']" data-hoffset="['100']" 
-                data-y="['middle','middle','middle','middle']" data-voffset="['19']" 
-                data-width="5"
-                data-height="544"
-                data-whitespace="nowrap"
-                data-type="shape" 
-                data-responsive_offset="on" 
-                data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;","speed":1000,"to":"o:1;","delay":1800,"ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]'
-                data-textAlign="['left','left','left','left']"
-                data-paddingtop="[0,0,0,0]"
-                data-paddingright="[0,0,0,0]"
-                data-paddingbottom="[0,0,0,0]"
-                data-paddingleft="[0,0,0,0]"
-                style="background-color:#15758B;"> </div>
-
-              <!-- Layer 5 -->
-
-              <div class="slider-title tp-caption tp-resizeme" 
-                data-x="['left']" data-hoffset="['156']"  
-                data-y="['middle','middle','middle','middle']" data-voffset="['-30']"
-                data-textAlign="['left']"
-                data-fontsize="['72', '63','57','50']"
-                data-lineheight="['72','68', '62','54']"
-                data-height="none"
-                data-whitespace="nowrap"
-                data-transform_idle="o:1;"
-                data-transform_in="x:[-155%];z:0;rX:0deg;rY:0deg;rZ:0deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power2.easeInOut;" 
-                data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-                data-mask_in="x:50px;y:0px;s:inherit;e:inherit;" 
-                data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
-                data-start="500" 
-                data-splitin="chars" 
-                data-splitout="none" 
-                data-responsive_offset="on" 
-                data-elementdelay="0.05" style="font-weight:600; letter-spacing:-0.05em;">The luxury<br> residence in<br> forest
-              </div>
-
-
-              <!-- Layer 6 -->
-
-              <div class="slider-title tp-caption" 
-                data-x="['left']" data-hoffset="['156']"  
-                data-y="['middle','middle','middle','middle']" data-voffset="['-170']"
-                data-textAlign="['left']"
-                data-fontsize="['18']"
-                data-lineheight="['20']"
-                data-height="none"
-                data-whitespace="nowrap"
-                data-transform_idle="o:1;"
-                data-transform_in="x:[155%];z:0;rX:0deg;rY:0deg;rZ:0deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power2.easeInOut;" 
-                data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-                data-mask_in="x:50px;y:0px;s:inherit;e:inherit;" 
-                data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
-                data-start="1000" 
-                data-splitin="chars" 
-                data-splitout="none" 
-                data-responsive_offset="on" 
-                data-elementdelay="0.05" style="font-weight:600; letter-spacing:0.1em; text-transform:uppercase;">Residential
-              </div>
-
-              <!-- Layer 7 -->
-
-              <div class="slider-title tp-caption" 
-                data-x="['left']" data-hoffset="['156']"  
-                data-y="['middle','middle','middle','middle']" data-voffset="['230']"
-                data-textAlign="['left']"
-                data-fontsize="['18']"
-                data-lineheight="['20']"
-                data-height="none"
-                data-whitespace="nowrap"
-                data-transform_idle="o:1;"
-                data-transform_in="x:[-105%];z:0;rX:0deg;rY:0deg;rZ:0deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power2.easeInOut;" 
-                data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-                data-mask_in="x:50px;y:0px;s:inherit;e:inherit;" 
-                data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
-                data-start="1500" 
-                data-splitin="none" 
-                data-splitout="none" 
-                data-responsive_offset="on" 
-                data-elementdelay="0.05" style="font-weight:600; ">
-                  <a href="" class="link-arrow">See project <i class="icon ion-ios-arrow-thin-right"></i>
-                </a>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </main>
-
-    <div class="content">   
-
-      <!-- Section About -->
-
-      <section class="section-about">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6">
-              <strong class="section-subtitle">about us</strong>
-              <h2 class="section-title section-about-title">We Are The Leader In The Architectural</h2>
-              <p>For each project we establish relationships with partners who we know will help us create added value for your project. As well as bringing together the public and private sectors, we make sector-overarching links to gather knowledge and to learn from each other</p>
-              <div class="experience-box">
-                <div class="experience-border"></div>
-                <div class="experience-content">
-                  <div class="experience-number">26</div>
-                  <div class="experience-info wow fadeInDown">Years<br>Experience<br>Working</div>
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark p-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="row gx-0 d-none d-lg-flex">
+            <div class="col-lg-7 px-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-3">
+                    <a class="text-body px-2" href="tel:+91 8652088618 / 8286189832"><i
+                            class="fa fa-phone-alt text-primary me-2"></i>+91 8652088618 / 8286189832</a>
+                    <a class="text-body px-2" href="mailto:info@example.com"><i
+                            class="fa fa-envelope-open text-primary me-2"></i>sabhajeetnv@gmail.com</a>
                 </div>
-              </div>
             </div>
-            <div class="col-md-5 col-md-offset-1">
-              <div class="dots-image">
-                <img alt="" class="about-img img-responsive" src="images/1-470x660.png">
-                <div class="dots"></div>
-              </div>
+            <div class="col-lg-5 px-5 text-end">
+                <div class="h-100 d-inline-flex align-items-center">
+                    <a class="btn btn-sm-square btn-outline-body me-1"
+                        href="https://www.facebook.com/SV DESIGEN STUDIO.interiors?mibextid=ZbWKwL"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <!-- <a class="btn btn-sm-square btn-outline-body me-1" href=""><i class="fab fa-twitter"></i></a> -->
+                    <a class="btn btn-sm-square btn-outline-body me-1"
+                        href="https://www.linkedin.com/company/SV DESIGEN STUDIO2019/about/"><i class="fab fa-linkedin-in"></i></a>
+                    <!-- <a class="btn btn-sm-square btn-outline-body me-0" href=""><i class="fab fa-instagram"></i></a> -->
+                </div>
             </div>
-          </div>
         </div>
-      </section>
+    </div>
+    <!-- Topbar End -->
 
-      <!-- Section Projects -->
 
-      <section>
-        <div class="text-white section-3" style="z-index: 4; transform: translate3d(0px, 0px, 0px);">
-          <div class="scroll-wrap">
-            <div class="bg-changer">
-              <div class="section-bg" style="background-image:url(images/bg/bg2.PNG);"></div>
-              <div class="section-bg" style="background-image:url(images/bg/bg2-2.PNG);"></div>
-              <div class="section-bg active" style="background-image:url(images/bg/bg2-3.PNG);"></div>
-              <div class="section-bg" style="background-image:url(images/bg/bg2-4.PNG);"></div>
-              <div class="section-bg" style="background-image:url(images/bg/bg2-5.PNG);"></div>
-              <div class="section-bg" style="background-image:url(images/bg/bg2-6.PNG);"></div>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid logo">
+            <img src="img/SVlogo.png" alt="Logo" class="navbar-brand">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end gap-5" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0 pa">
+                    <li class="nav-item navi">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="service.html">Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                        <a class="nav-link butn1" href="#">Get Free Estimate</a>   
+                    
+                </form>
             </div>
-            <div class="scrollable-content">
-              <div class="vertical-centred">
-                <div class="boxed boxed-inner">
-                  <div class="vertical-title hidden-xs hidden-sm"><span>our services</span></div>
-                  <div class="boxed">
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 pb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="owl-carousel header-carousel position-relative">
+            <div class="owl-carousel-item position-relative" data-dot="<img src='img/carousel-1.jpg'>">
+                <img class="img-fluid" src="img/slide1.png" alt="">
+                <div class="owl-carousel-inner">
                     <div class="container">
-                      <div class="intro">
-                        <div class="row">
-                          <div class="col-md-12">
-                            <h2 class="title-uppercase text-white">Our Services</h2>
-                            <div class="row-project-box row">
-                              <div class="col-project-box col-sm-6 col-md-4 col-lg-3">
-                                <a href="" class="project-box">
-                                  <div class="project-box-inner">
-                                    <h5>UCAM Minimalist Apartment</h5>
-                                    <div class="project-category">House Design</div>
-                                  </div>
-                                </a>
-                              </div>
-                              <div class="col-project-box col-sm-6 col-md-4 col-lg-3">
-                                <a href="" class="project-box">
-                                  <div class="project-box-inner">
-                                    <h5>Scadinavan Living Room</h5>
-                                    <div class="project-category">House Design</div>
-                                  </div>
-                                </a>
-                              </div>
-                              <div class="col-project-box col-sm-6 col-md-4 col-lg-3">
-                                <a href="" class="project-box">
-                                  <div class="project-box-inner">
-                                    <h5>Office For Fashion Brand Store</h5>
-                                    <div class="project-category">Commercial Design</div>
-                                  </div>
-                                </a>
-                              </div>
-                              <div class="col-project-box col-sm-6 col-md-4 col-lg-3">
-                                <a href="" class="project-box">
-                                  <div class="project-box-inner">
-                                    <h5>Rennovate Toilet</h5>
-                                    <div class="project-category">House Design</div>
-                                  </div>
-                                </a>
-                              </div>
-                              <div class="col-project-box col-sm-6 col-md-4 col-lg-3">
-                                <a href="" class="project-box">
-                                  <div class="project-box-inner">
-                                    <h5>Rennovate Toilet</h5>
-                                    <div class="project-category">House Design</div>
-                                  </div>
-                                </a>
-                              </div>
-                              <div class="col-project-box col-sm-6 col-md-4 col-lg-3">
-                                <a href="" class="project-box">
-                                  <div class="project-box-inner">
-                                    <h5>Rennovate Toilet</h5>
-                                    <div class="project-category">House Design</div>
-                                  </div>
-                                </a>
-                              </div>
+                        <div class="row justify-content-between">
+                            <div class="col-10 col-lg-6">
+                                <h1 class="display-1 text-white animated slideInDown">Transforming Ideas into Pixels: Your Vision, Our Innovation</h1>
+                                <!-- <p class="fs-5 fw-medium text-white mb-4 pb-3">Vero elitr justo clita lorem. Ipsum dolor
+                                    at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea
+                                    elitr.</p> -->
+                                <a href="" class="btn btn-primary py-3 px-5 animated slideInLeft">Read More</a>
                             </div>
-                            <a href="#" class="h5 link-arrow text-white">view all projects <i class="icon icon-chevron-right"></i></a>
-                          </div>
+                            <div class="header-form col-10 col-lg-4">
+                                <h3 class="mrt-0 mrb-30">Need Any Help?</h3>
+                                <form action="#">
+                                    <div class="row">
+                                        <div class="col-xl-12 mb-4">
+                                            <div class="mrb-20">
+                                                <input type="text" placeholder="Name" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 mb-4">
+                                            <div class="mrb-20">
+                                                <input type="phone" placeholder="Phone" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 mb-4">
+                                            <div class="mrb-20">
+                                                <input type="email" placeholder="Email" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 mb-4">
+                                            <div class="mrb-20">
+                                                <textarea rows="4" name="message" placeholder="Messages"
+                                                    class="form-control" required=""></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12 mb-2">
+                                            <div class="mrb-0">
+                                                <button type="submit"
+                                                    class="btn btn-primary py-2 px-4 d-none d-lg-block">Request
+                                                    Submit</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h6 class="mrt-0 mrb-30">Need Any Help?</h6>
+                                </form>
+                            </div>
                         </div>
-                      </div>
                     </div>
-                  </div>
                 </div>
-              </div>
             </div>
-          </div>
+            <!-- <div class="owl-carousel-item position-relative" data-dot="<img src='img/carousel-2.jpg'>">
+                <img class="img-fluid" src="img/carousel-2.jpg" alt="">
+                <div class="owl-carousel-inner">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-10 col-lg-8">
+                                <h1 class="display-1 text-white animated slideInDown">Best Architecture And Interior Design Services</h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-3">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.</p>
+                                <a href="" class="btn btn-primary py-3 px-5 animated slideInLeft">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-carousel-item position-relative" data-dot="<img src='img/carousel-3.jpg'>">
+                <img class="img-fluid" src="img/carousel-3.jpg" alt="">
+                <div class="owl-carousel-inner">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-10 col-lg-8">
+                                <h1 class="display-1 text-white animated slideInDown">Best Architecture And Interior Design Services</h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-3">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.</p>
+                                <a href="" class="btn btn-primary py-3 px-5 animated slideInLeft">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
         </div>
-      </section>
+    </div>
+    <!-- Carousel End -->
 
-      <section class="section-projects section">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-5">
-               <h2 class="section-title">Latest Projects</h2>
-            </div>        
-          </div>
+    <div class="container-xxl py-5">
+        <div class="wrapper">
+            <div class="bar">
+            </div>
+            <div class="d-flex">
+                <div class="item item-1">
+                    <div class="step">
+                        <img src="roadmap/web-design.png" alt="">
+                        <p>Meet a designer</p>
+                    </div>
+                </div>
+                <div class="item item-2">
+                    <div class="step">
+                        <img src="roadmap/smartphone.png" alt="">
+                        <p>Book a Renovation</p>
+                    </div>
+                </div>
+                <div class="item item-3">
+                    <div class="step">
+                        <img src="roadmap/payment-method.png" alt="">
+                        <p>Execution </p>
+                    </div>
+                </div>
+                <div class="item item-4">
+                    <div class="step">
+                        <img src="roadmap/credit-card.png" alt="">
+                        <p>installation</p>
+                    </div>
+                </div>
+                <div class="item item-5">
+                    <div class="step">
+                        <img src="roadmap/cargo.png" alt="">
+                        <p>Move in and Enjoy!</p>
+                    </div>
+                </div>
+                <div class="item item-5">
+                    <div class="step">
+                        <img src="roadmap/thanks.png" alt="">
+                        <p>thankyou</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="project-carousel owl-carousel">
-          <div class="project-item item-shadow building">
-            <img alt="" class="img-responsive" src="images/projects/1-426x574.png">
-            <div class="project-hover">
-              <div class="project-hover-content">
-                <h3 class="project-title">Triangle<br>Concrete House<br>On Lake</h3>
-                <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipil pcing elit. Proin nunc leo, rhoncus sit amet tolil arcu vel, pharetra volutpat sem lorn Donec tincidunt velit nec laoreet semper...</p>
-              </div>
-            </div>
-            <a href="" class="link-arrow">See project <i class="icon ion-ios-arrow-right"></i></a>
-          </div>
-          <div class="project-item item-shadow building">
-            <img alt="" class="img-responsive" src="images/projects/1-426x574.png">
-            <div class="project-hover">
-              <div class="project-hover-content">
-                <h3 class="project-title">Ocean<br>Museum<br>Italy</h3>
-                <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipil pcing elit. Proin nunc leo, rhoncus sit amet tolil arcu vel, pharetra volutpat sem lorn Donec tincidunt velit nec laoreet semper...</p>
-              </div>
-            </div>
-            <a href="" class="link-arrow">See project <i class="icon ion-ios-arrow-right"></i></a>
-          </div>
-          <div class="project-item item-shadow building">
-            <img alt="" class="img-responsive" src="images/projects/1-426x574.png">
-            <div class="project-hover">
-              <div class="project-hover-content">
-                <h3 class="project-title">Milko<br>Co-Working<br>Building</h3>
-                <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipil pcing elit. Proin nunc leo, rhoncus sit amet tolil arcu vel, pharetra volutpat sem lorn Donec tincidunt velit nec laoreet semper...</p>
-              </div>
-            </div>
-            <a href="" class="link-arrow">See project <i class="icon ion-ios-arrow-right"></i></a>
-          </div>
-          <div class="project-item item-shadow building">
-            <img alt="" class="img-responsive" src="images/projects/1-426x574.png">
-            <div class="project-hover">
-              <div class="project-hover-content">
-                <h3 class="project-title">Redesign<br>Interior For<br>Villa</h3>
-                <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipil pcing elit. Proin nunc leo, rhoncus sit amet tolil arcu vel, pharetra volutpat sem lorn Donec tincidunt velit nec laoreet semper...</p>
-              </div>
-            </div>
-            <a href="" class="link-arrow">See project <i class="icon ion-ios-arrow-right"></i></a>
-          </div>
-          <div class="project-item item-shadow interior-exterior">
-            <img alt="" class="img-responsive" src="images/projects/1-426x574.png">
-            <div class="project-hover">
-              <div class="project-hover-content">
-                <h3 class="project-title">Wooden<br>Hozirontal<br>Villa</h3>
-                <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipil pcing elit. Proin nunc leo, rhoncus sit amet tolil arcu vel, pharetra volutpat sem lorn Donec tincidunt velit nec laoreet semper...</p>
-              </div>
-            </div>
-            <a href="" class="link-arrow">See project <i class="icon ion-ios-arrow-right"></i></a>
-          </div>
-          <div class="project-item item-shadow interior-exterior">
-            <img alt="" class="img-responsive" src="images/projects/1-426x574.png">
-            <div class="project-hover">
-              <div class="project-hover-content">
-                <h3 class="project-title">Small<br>House Near<br>Wroclaw</h3>
-                <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipil pcing elit. Proin nunc leo, rhoncus sit amet tolil arcu vel, pharetra volutpat sem lorn Donec tincidunt velit nec laoreet semper...</p>
-              </div>
-            </div>
-            <a href="" class="link-arrow">See project <i class="icon ion-ios-arrow-right"></i></a>
-          </div>
-          <div class="project-item item-shadow interior-exterior">
-            <img alt="" class="img-responsive" src="images/projects/1-426x574.png">
-            <div class="project-hover">
-              <div class="project-hover-content">
-                <h3 class="project-title">Bellecomde<br>Holiday<br>Residence</h3>
-                <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipil pcing elit. Proin nunc leo, rhoncus sit amet tolil arcu vel, pharetra volutpat sem lorn Donec tincidunt velit nec laoreet semper...</p>
-              </div>
-            </div>
-            <a href="" class="link-arrow">See project <i class="icon ion-ios-arrow-right"></i></a>
-          </div>
-          <div class="project-item item-shadow interior-exterior">
-            <img alt="" class="img-responsive" src="images/projects/1-426x574.png">
-            <div class="project-hover">
-              <div class="project-hover-content">
-                <h3 class="project-title">Cubic<br>Inter Mesuem<br>In Rome</h3>
-                <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipil pcing elit. Proin nunc leo, rhoncus sit amet tolil arcu vel, pharetra volutpat sem lorn Donec tincidunt velit nec laoreet semper...</p>
-              </div>
-            </div>
-            <a href="" class="link-arrow">See project <i class="icon ion-ios-arrow-right"></i></a>
-          </div>
-        </div>
-      </section>
-
-      <!-- Section Clients -->
-
-      <section class="section-clients section bg-dots">
-        <div class="container">
-          <h2 class="section-title">From Great Our Clients</h2>
-          <div class="client-carousel owl-carousel">
-            <div class="client-carousel-item">
-              <img alt="" class="client-img" src="images/clients/1-92x92.jpg">
-              <div class="client-box">
-                <img alt="" class="image-quote" src="images/image-icons/icon-quote.png">
-                <div class="client-title">
-                  <span class="client-name">Adam Stone</span> 
-                  <span class="client-company">/ CEO at Google INC</span>
-                </div>
-                <p class="client-description">Sed elit quam, iaculis sed semper sit amet udin vitae nibh. at magna akal semperFusce commodo molestie luctus.Lorem ipsum Dolor tusima olatiup.</p>
-              </div>
-            </div>
-            <div class="client-carousel-item">
-              <img alt="" class="client-img" src="images/clients/2-92x92.jpg">
-              <div class="client-box">
-                <img alt="" class="image-quote" src="images/image-icons/icon-quote.png">
-                <div class="client-title">
-                  <span class="client-name">Anabella Kleva </span> 
-                  <span class="client-company">/ Managerment at Envato</span>
-                </div>
-                <p class="client-description">Sed elit quam, iaculis sed semper sit amet udin vitae nibh. at magna akal semperFusce commodo molestie luctus.Lorem ipsum Dolor tusima olatiup.</p>
-              </div>
-            </div>
-            <div class="client-carousel-item">
-              <img alt="" class="client-img" src="images/clients/1-92x92.jpg">
-              <div class="client-box">
-                <img alt="" class="image-quote" src="images/image-icons/icon-quote.png">
-                <div class="client-title">
-                  <span class="client-name">Adam Stone</span> 
-                  <span class="client-company">/ CEO at Google INC</span>
-                </div>
-                <p class="client-description">Sed elit quam, iaculis sed semper sit amet udin vitae nibh. at magna akal semperFusce commodo molestie luctus.Lorem ipsum Dolor tusima olatiup. Sed elit quam, iaculis sed semper sit amet udin vitae nibh</p>
-              </div>
-            </div>
-            <div class="client-carousel-item">
-              <img alt="" class="client-img" src="images/clients/2-92x92.jpg">
-              <div class="client-box">
-                <img alt="" class="image-quote" src="images/image-icons/icon-quote.png">
-                <div class="client-title">
-                  <span class="client-name">Adam Stone</span> 
-                  <span class="client-company">/ CEO at Google INC</span>
-                </div>
-                <p class="client-description">Sed elit quam, iaculis sed semper sit amet udin vitae nibh. at magna akal semperFusce commodo molestie luctus.Lorem ipsum Dolor tusima olatiup.</p>
-              </div>
-            </div>
-          </div>
-          <div class="partner-carousel owl-carousel">
-            <div class="partner-carousel-item">
-              <img alt="" src="images/partners/1.png">
-            </div>
-            <div class="partner-carousel-item">
-              <img alt="" src="images/partners/1.png">
-            </div>
-            <div class="partner-carousel-item">
-              <img alt="" src="images/partners/1.png">
-            </div>
-            <div class="partner-carousel-item">
-              <img alt="" src="images/partners/1.png">
-            </div>
-            <div class="partner-carousel-item">
-              <img alt="" src="images/partners/1.png">
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Section News -->
-
-      <!-- <section class="section-news section">
-        <div class="container">
-          <h2 class="section-title">Latest News <a href="" class="link-arrow-2 pull-right">All Articles <i class="icon ion-ios-arrow-right"></i></a></h2>
-          <div class="news-carousel owl-carousel">
-            <div class="news-item">
-              <img alt="" src="images/news/1-370x370.jpg">
-              <div class="news-hover">
-                <div class="hover-border"><div></div></div>
-                <div class="content">
-                  <div class="time">Dec 15th, 2016</div>
-                  <h3 class="news-title">Discover Architecture Of Bario</h3>
-                  <p class="news-description">Lorem ipsum dolor sit amet, consect etur adipiscing elit. Mauris vel auctorol est. Integer nunc ipsum...</p>
-                </div>
-                <a class="read-more" href="#">Continue</a>
-              </div>
-            </div>
-            <div class="news-item">
-              <img alt="" src="images/news/2-370x370.jpg">
-              <div class="news-hover">
-                <div class="hover-border"><div></div></div>
-                <div class="content">
-                  <div class="time">Dec 15th, 2016</div>
-                  <h3 class="news-title">Discover Architecture Of Bario</h3>
-                  <p class="news-description">Lorem ipsum dolor sit amet, consect etur adipiscing elit. Mauris vel auctorol est. Integer nunc ipsum...</p>
-                </div>
-                <a class="read-more" href="#">Continue</a>
-              </div>
-            </div>
-            <div class="news-item">
-              <img alt="" src="images/news/3-370x370.jpg">
-              <div class="news-hover">
-                <div class="hover-border"><div></div></div>
-                <div class="content">
-                  <div class="time">Dec 15th, 2016</div>
-                  <h3 class="news-title">Discover Architecture Of Bario</h3>
-                  <p class="news-description">Lorem ipsum dolor sit amet, consect etur adipiscing elit. Mauris vel auctorol est. Integer nunc ipsum...</p>
-                </div>
-                <a class="read-more" href="#">Continue</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> -->
     </div>
 
-    <!-- Footer -->
 
-    <footer id="footer" class="footer section"> 
-      <div class="footer-flex">
-        <div class="flex-item">
-          <a class="brand pull-left" href="#">
-            <img alt="" src="images/brand.png">
-          </a>
+    <!-- Facts Start -->
+    <div class="container-xxl py-5">
+        <div class="container pt-5">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                        <div class="fact-icon">
+                            <img src="disscount strock/sketch.png" alt="Icon">
+                        </div>
+                        <h3 class="mb-3">Personalised Design</h3>
+
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                        <div class="fact-icon">
+                            <img src="img/icons/icon-3.png" alt="Icon">
+                        </div>
+                        <h3 class="mb-3">Innovative Solutions</h3>
+
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="fact-item text-center bg-light h-100 p-5 pt-0">
+                        <div class="fact-icon">
+                            <img src="disscount strock/offer.png" alt="Icon">
+                        </div>
+                        <h3 class="mb-3">Transparent Pricing</h3>
+
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="flex-item">
-          <div class="inline-block">© SV Interior 2023<br>All Rights Resevered</div>
+    </div>
+    <!-- Facts End -->
+
+
+    <!-- About Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="about-img">
+                        <img class="img-fluid" src="inrerior/Living-Room-14.jpg" alt="">
+                        <img class="img-fluid" src="inrerior/2ff4daa71fcbce6596ec218982f51f9f.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <h4 class="section-title">About Us</h4>
+                    <h1 class="display-5 mb-4">A Creative interior designing Agency For Your Dream Home</h1>
+                    <p>   Elevate your living spaces with SV Design Studio, a creative force in interior design dedicated to bringing your dream home to life. Our skilled team blends innovation and artistic flair, ensuring each corner reflects your unique style. 
+                        From conceptualization to execution, we craft personalized environments that resonate with your vision.</p>
+                    <p class="mb-4">At SV Design Studio, we understand your home is a canvas of personal expression,
+                         and our mission is to turn it into a masterpiece. Focusing on creativity and functionality, 
+                         we meticulously design interiors that seamlessly blend style and practicality. Trust us to provide a bespoke interior design experience, exceeding expectations and enhancing the comfort and beauty of your dream home.
+                    </p>
+                    <div class="d-flex align-items-center mb-5">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center border border-5 border-primary"
+                            style="width: 120px; height: 120px;">
+                            <h1 class="display-1 mb-n2" data-toggle="counter-up">06</h1>
+                        </div>
+                        <div class="ps-4">
+                            <h3>Years</h3>
+                            <h3>Working</h3>
+                            <h3 class="mb-0">Experience</h3>
+                        </div>
+                    </div>
+                    <a class="btn btn-primary py-3 px-5" href="">Read More</a>
+                </div>
+            </div>
         </div>
-        <div class="flex-item">
-          <ul>
-            <li><a href="">Site Map</a></li>
-            <li><a href="">Term & Conditions</a></li>
-            <li><a href="">Privacy Policy</a></li>
-            <li><a href="">Help</a></li>
-            <li><a href="">Affiliatep</a></li>
-          </ul> 
+    </div>
+    <!-- About End -->
+
+
+    <!-- Service Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h4 class="section-title">Our Services</h4>
+                <h1 class="display-5 mb-4">We Focused On Modern Architecture And Interior Design</h1>
+            </div>
+
+            <div>
+                <!-------frist raw-------->
+                <div class="row mb-4">
+
+                    <div class=" col-6 col-lg-3 col-md-4 wow fadeInUp  wow fadeInUp " data-wow-delay="0.1s"
+                        style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+                        <div class="service-item position-relative text-center ">
+                            <div class="service-text p-5">
+                                <img class="mb-4" src="strocks/kitchen (1).png" alt="Icon">
+                                <h3 class="mb-3">Crockery Unit</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-lg-3 col-md-4  wow fadeInUp " data-wow-delay="0.1s"
+                        style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+                        <div class="service-item position-relative text-center ">
+                            <div class="service-text p-5">
+                                <img class="mb-4" src="strocks/wardrobe.png" Icon">
+                                <h3 class="mb-3">Storage & Wardrobe</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-lg-3 col-md-4  wow fadeInUp " data-wow-delay="0.1s"
+                        style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+                        <div class="service-item position-relative text-center ">
+                            <div class="service-text p-5">
+                                <img class="mb-4" src="strocks/office-desk.png" alt="Icon">
+                                <h3 class="mb-3">Study table</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-lg-3 col-md-4  wow fadeInUp " data-wow-delay="0.1s"
+                        style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+                        <div class="service-item position-relative text-center ">
+                            <div class="service-text p-5">
+                                <img class="mb-4" src="strocks/tv-unit.png" alt="Icon">
+                                <h3 class="mb-3">Tv unit</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+
+                    <div class="col-6 col-lg-3 col-md-4  wow fadeInUp " data-wow-delay="0.1s"
+                        style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+                        <div class="service-item position-relative text-center ">
+                            <div class="service-text p-5">
+                                <img class="mb-4" src="strocks/dining-table.png" alt="Icon">
+                                <h3 class="mb-3">Movable Furniture</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-lg-3 col-md-4  wow fadeInUp " data-wow-delay="0.1s"
+                        style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+                        <div class="service-item position-relative text-center ">
+                            <div class="service-text p-5">
+                                <img class="mb-4" src="strocks/painting.png" alt="Icon">
+                                <h3 class="mb-3">Wallpaper</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ccol-6 col-lg-3 col-md-4  wow fadeInUp " data-wow-delay="0.1s"
+                        style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+                        <div class="service-item position-relative text-center ">
+                            <div class="service-text p-5">
+                                <img class="mb-4" src="strocks/lamp.png" alt="Icon">
+                                <h3 class="mb-3">Lights</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-lg-3 col-md-4  wow fadeInUp " data-wow-delay="0.1s"
+                        style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+                        <div class="service-item position-relative text-center ">
+                            <div class="service-text p-5">
+                                <img class="mb-4" src="strocks/bunk-bed.png" alt="Icon">
+                                <h3 class="mb-3">Kids Bedroom</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+
+                    <div class="col-6 col-lg-3 col-md-4  wow fadeInUp " data-wow-delay="0.1s"
+                        style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+                        <div class="service-item position-relative text-center ">
+                            <div class="service-text p-5">
+                                <img class="mb-4" src="strocks/paint-roller.png" alt="Icon">
+                                <h3 class="mb-3">Wall Paint</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-lg-3 col-md-4  wow fadeInUp " data-wow-delay="0.1s"
+                        style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+                        <div class="service-item position-relative text-center ">
+                            <div class="service-text p-5">
+                                <img class="mb-4" src="strocks/bathtub.png" alt="Icon">
+                                <h3 class="mb-3">Bathroom</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-lg-3 col-md-4  wow fadeInUp " data-wow-delay="0.1s"
+                        style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+                        <div class="service-item position-relative text-center ">
+                            <div class="service-text p-5">
+                                <img class="mb-4" src="strocks/lamp-decor.png" alt="Icon">
+                                <h3 class="mb-3">False ceiling</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-lg-3 col-md-4  wow fadeInUp " data-wow-delay="0.1s"
+                        style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+                        <div class="service-item position-relative text-center ">
+                            <div class="service-text p-5">
+                                <img class="mb-4" src="strocks/kitchen.png" alt="Icon">
+                                <h3 class="mb-3">kitchen</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
         </div>
-        <div class="flex-item">
-          <ul>
-            <li><a href="">Our Location</a></li>
-            <li><a href="">Career</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Contact</a></li>
-          </ul> 
+    </div>
+
+    <!-- Service End -->
+
+
+    <!-- Feature Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h4 class="section-title">Why Choose Us!</h4>
+                    <h1 class="display-5 mb-4">Why You Should Trust Us? Learn More About Us!</h1>
+                    <p class="mb-4">
+                        SV Design Studio captivates clients with its unmatched blend of creativity and expertise. Our commitment to turning visions into captivating interiors sets us apart. With a team dedicated to precision and personalization, we bring dreams to life seamlessly. Choose SV Design Studio for an exceptional, tailored interior design experience that transforms spaces into reflections of individual style.
+                    </p>
+                    <div class="row g-4">
+                        <div class="col-12">
+                            <div class="d-flex align-items-start">
+                                <img class="flex-shrink-0" src="img/icons/icon-2.png" alt="Icon">
+                                <div class="ms-4">
+                                    <h3>Design Approach</h3>
+                                    <p class="mb-0">At SV Design Studio, we craft purposeful and visually stunning spaces through an innovative and meticulous approach, tailored to meet our clients' unique needs and aspirations.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-flex align-items-start">
+                                <img class="flex-shrink-0" src="img/icons/3-c.png" alt="Icon">
+                                <div class="ms-4">
+                                    <h3>Innovative Solutions</h3>
+                                    <p class="mb-0">
+                                        Delivering innovative solutions is our forte at SV Design Studio, where we redefine spaces with creativity and cutting-edge design, ensuring a unique and transformative experience for our clients.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-flex align-items-start">
+                                <img class="flex-shrink-0" src="img/icons/icon-4.png" alt="Icon">
+                                <div class="ms-4">
+                                    <h3>Project Management</h3>
+                                    <p class="mb-0">At SV Design Studio, we excel in streamlined project management, ensuring your vision is seamlessly realized with precision and timely delivery. From concept to completion, we handle every detail, making your dream space a reality.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="feature-img">
+                        <img class="img-fluid" src="inrerior/living-room-designs-indian-style-middle-class.jpg" alt="">
+                        <img class="img-fluid"
+                            src="inrerior/small-living-room-ideas-fatma-el-aminub9a8769-1673370515.jpg" alt="">
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="flex-item">
-          <ul>
-            <li class="active"><a href="">ENG</a></li>
-            <li><a href="">FRA</a></li>
-            <li><a href="">GER</a></li>
-          </ul> 
+    </div>
+    <!-- Feature End -->
+   
+
+
+    <!-- Project Start -->
+    <div class="container-xxl project py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h4 class="section-title">Our Projects</h4>
+                <h1 class="display-5 mb-4">Visit Our Latest Projects And Our Innovative Works</h1>
+            </div>
+            <div class="row g-4 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="col-lg-4">
+                    <div class="nav nav-pills d-flex justify-content-between w-100 h-100 me-4">
+                        <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4 active"
+                            data-bs-toggle="pill" data-bs-target="#tab-pane-1" type="button">
+                            <h3 class="m-0">01. Modern Complex</h3>
+                        </button>
+                        <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4"
+                            data-bs-toggle="pill" data-bs-target="#tab-pane-2" type="button">
+                            <h3 class="m-0">02. Royal Hotel</h3>
+                        </button>
+                        <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4"
+                            data-bs-toggle="pill" data-bs-target="#tab-pane-3" type="button">
+                            <h3 class="m-0">03. Mexwel Buiding</h3>
+                        </button>
+                        <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-0"
+                            data-bs-toggle="pill" data-bs-target="#tab-pane-4" type="button">
+                            <h3 class="m-0">04. Shopping Complex</h3>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="tab-content w-100">
+                        <div class="tab-pane fade show active" id="tab-pane-1">
+                            <div class="row g-4">
+                                <div class="col-md-6" style="min-height: 350px;">
+                                    <div class="position-relative h-100">
+                                        <img class="position-absolute img-fluid w-100 h-100"
+                                            src="img/modern complex.jpg"
+                                            style="object-fit: cover;" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <h1 class="mb-3">6 Years Of Experience In Architecture Industry</h1>
+                                    <p class="mb-4">With a wealth of experience in interior design, SV Design Studio transforms spaces into personalized sanctuaries.
+                                         Our seasoned team combines expertise with creativity, 
+                                         curating environments that seamlessly blend functionality, aesthetics, and the unique preferences of our clients.</p>
+                                    <p><i class="fa fa-check text-primary me-3"></i>Design Approach</p>
+                                    <p><i class="fa fa-check text-primary me-3"></i>Innovative Solutions</p>
+                                    <p><i class="fa fa-check text-primary me-3"></i>Project Management</p>
+                                    <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab-pane-2">
+                            <div class="row g-4">
+                                <div class="col-md-6" style="min-height: 350px;">
+                                    <div class="position-relative h-100">
+                                        <img class="position-absolute img-fluid w-100 h-100"
+                                            src="img/royalhotel.jpg"
+                                            style="object-fit: cover;" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <h1 class="mb-3">6 Years Of Experience In Architecture Industry</h1>
+                                    <p class="mb-4">With a wealth of experience in interior design, SV Design Studio transforms spaces into personalized sanctuaries. Our seasoned team combines expertise with creativity, 
+                                        curating environments that seamlessly blend functionality, aesthetics, and the unique preferences of our clients.</p>
+                                    <p><i class="fa fa-check text-primary me-3"></i>Design Approach</p>
+                                    <p><i class="fa fa-check text-primary me-3"></i>Innovative Solutions</p>
+                                    <p><i class="fa fa-check text-primary me-3"></i>Project Management</p>
+                                    <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab-pane-3">
+                            <div class="row g-4">
+                                <div class="col-md-6" style="min-height: 350px;">
+                                    <div class="position-relative h-100">
+                                        <img class="position-absolute img-fluid w-100 h-100"
+                                            src="img/mexwelbuilding.jpg"
+                                            style="object-fit: cover;" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <h1 class="mb-3">6 Years Of Experience In Architecture Industry</h1>
+                                    <p class="mb-4">With a wealth of experience in interior design, SV Design Studio transforms spaces into personalized sanctuaries. Our seasoned team combines expertise with creativity,
+                                         curating environments that seamlessly blend functionality, aesthetics, and the unique preferences of our clients.</p>
+                                    <p><i class="fa fa-check text-primary me-3"></i>Design Approach</p>
+                                    <p><i class="fa fa-check text-primary me-3"></i>Innovative Solutions</p>
+                                    <p><i class="fa fa-check text-primary me-3"></i>Project Management</p>
+                                    <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab-pane-4">
+                            <div class="row g-4">
+                                <div class="col-md-6" style="min-height: 350px;">
+                                    <div class="position-relative h-100">
+                                        <img class="position-absolute img-fluid w-100 h-100"
+                                            src="img/shopingcomplex.jpg"
+                                            style="object-fit: cover;" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <h1 class="mb-3">6 Years Of Experience In Architecture Industry</h1>
+                                    <p class="mb-4">With a wealth of experience in interior design, SV Design Studio transforms spaces into personalized sanctuaries. Our seasoned team combines expertise with creativity, 
+                                        curating environments that seamlessly blend functionality, aesthetics, and the unique preferences of our clients.</p>
+                                    <p><i class="fa fa-check text-primary me-3"></i>Design Approach</p>
+                                    <p><i class="fa fa-check text-primary me-3"></i>Innovative Solutions</p>
+                                    <p><i class="fa fa-check text-primary me-3"></i>Project Management</p>
+                                    <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="flex-item">
-          <div class="social-list">
-            <a href="" class="icon ion-social-twitter"></a>
-            <a href="" class="icon ion-social-facebook"></a>
-            <a href="" class="icon ion-social-googleplus"></a>
-            <a href="" class="icon ion-social-linkedin"></a>
-            <a href="" class="icon ion-social-dribbble-outline"></a>
-          </div>
+    </div>
+    <!-- Project End -->
+
+
+
+    <!-- <div class="container py-5 gap-4">
+        <div class="container">
+            <div class="d-flex mb-5 text-center justify-content-center align-items-center">
+                <div class="col-md-3 "><img class=" c-img " src="compny_logo/advancelam-logo.png" alt=""></div>
+                <div class="col-md-3 "><img class=" c-img " src="compny_logo/aristo.png" alt=""></div>
+                <div class="col-md-3 "><img class=" c-img " src="compny_logo/asian-paint-logo.png" alt=""></div>
+                <div class="col-md-3 "><img class=" c-img " src="compny_logo/download.png" alt=""></div>
+            </div>
+
+            <div class="d-flex mb-5 text-center justify-content-center align-items-center">
+                <div class="col-md-3 "><img class="c-img" src="compny_logo/Glen_Logo_2x_2_220x68.png" alt=""></div>
+                <div class="col-md-3 "><img class="c-img" src="compny_logo/greenlam-logo-removebg-preview.png" alt="">
+                </div>
+                <div class="col-md-3 "><img class="c-img " src="compny_logo/greenply-logo.png" alt=""></div>
+                <div class="col-md-3 "><img class="c-img " src="compny_logo/haefele_logo.png" alt=""></div>
+            </div>
+
+            <div class="d-flex mb-5 text-center justify-content-center align-items-center">
+                <div class="col-md-3 "><img class="c-img" src="compny_logo/download.jpeg" alt=""></div>
+                <div class="col-md-3 "><img class="c-img" src="compny_logo/mernino_updated_logo.png" alt=""></div>
+                <div class="col-md-3 "><img class="c-img " src="compny_logo/centuryply.png" alt=""></div>
+                <div class="col-md-3 "><img class="c-img " src="compny_logo/logo-hettich-noclaim.svg" alt=""></div>
+            </div>
+
+            <div class="d-flex mb-5 text-center justify-content-center align-items-center">
+                <div class="col-md-3 "><img class="c-img" src="compny_logo/favicol.png"></div>
+                <div class="col-md-3 "><img class="c-img" src="compny_logo/faber.png" alt=""></div>
+                <div class="col-md-3 "><img class="c-img" src="compny_logo/Urban_Ladder-Logo.wine.png" alt=""></div>
+                <div class="col-md-3 "><img class="c-img" src="compny_logo/saint.jpg" alt=""></div>
+            </div>
+
         </div>
-      </div>
-    </footer>
-  </div>
-</div>
-
-<!-- jQuery -->
-
-<script src="js/jquery.min.js"></script>
-<script src="js/animsition.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/smoothscroll.js"></script>
-<script src="js/jquery.validate.min.js"></script>
-<script src="js/wow.min.js"></script>
-<script src="js/jquery.stellar.min.js"></script>
-<script src="js/jquery.magnific-popup.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/isotope.pkgd.min.js"></script>
-<script src="js/imagesloaded.pkgd.min.js"></script>
-<script src="js/plugins.js"></script>
-<script src="js/sly.min.js"></script>
+    </div> -->
 
 
-<!-- Slider revolution -->
-<script src="js/rev-slider/jquery.themepunch.tools.min.js"></script>
-<script src="js/rev-slider/jquery.themepunch.revolution.min.js"></script>
+    <!-- Team Start -->
+    <!-- <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h4 class="section-title">Team Members</h4>
+                <h1 class="display-5 mb-4">We Are Creative Architecture Team For Your Dream Home</h1>
+            </div>
+            <div class="row g-0 team-items">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item position-relative">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="" alt="">
 
-<!-- Slider revolution 5x Extensions   -->
-<script src="js/rev-slider/revolution.extension.actions.min.js"></script>
-<script src="js/rev-slider/revolution.extension.carousel.min.js"></script>
-<script src="js/rev-slider/revolution.extension.kenburn.min.js"></script>
-<script src="js/rev-slider/revolution.extension.layeranimation.min.js"></script>
-<script src="js/rev-slider/revolution.extension.migration.min.js"></script>
-<script src="js/rev-slider/revolution.extension.navigation.min.js"></script>
-<script src="js/rev-slider/revolution.extension.parallax.min.js"></script>
-<script src="js/rev-slider/revolution.extension.slideanims.min.js"></script>
-<script src="js/rev-slider/revolution.extension.video.min.js"></script>
+                        </div>
+                        <div class="bg-light text-center p-4">
+                            <h3 class="mt-2">Lakshmi</h3>
+                            <span class="text-primary">General Manager</span>
+                            <div class="team-social text-center div-bg">
+                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item position-relative">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="" alt="">
+
+                        </div>
+                        <div class="bg-light text-center p-4">
+                            <h3 class="mt-2">Venkat</h3>
+                            <span class="text-primary">Project Manager</span>
+                            <div class="team-social text-center div-bg">
+                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item position-relative">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="" alt="">
+
+                        </div>
+                        <div class="bg-light text-center p-4">
+                            <h3 class="mt-2">Ankur</h3>
+                            <span class="text-primary">Sales Manager</span>
+                            <div class="team-social text-center  div-bg">
+                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="team-item position-relative">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="" alt="">
+
+                        </div>
+                        <div class="bg-light text-center p-4">
+                            <h3 class="mt-2">Syed</h3>
+                            <span class="text-primary">Designer</span>
+                            <div class="team-social text-center  div-bg">
+                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="team-item position-relative">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="" alt="">
+
+                        </div>
+                        <div class="bg-light text-center p-4">
+                            <h3 class="mt-2">Samreen</h3>
+                            <span class="text-primary">Designer</span>
+                            <div class="team-social text-center  div-bg">
+                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Team End -->
 
 
-<!-- Scripts -->
-<script src="js/scripts.js"></script> 
-<script src="js/rev-slider-init.js"></script>
+    <!-- Appointment Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h4 class="section-title">Appointment</h4>
+                    <h1 class="display-5 mb-4">Make An Appointment To Start Your Dream Project</h1>
+                    <p class="mb-4">Start your project with SV Design Studio. Schedule your appointment now, and let's bring your vision to life!"
+                    </p>
+                    <div>
+                        <h3>Connect with us</h3>
+                        <p>for innovative design </p>
+                        <div class="d-flex gap-3">
+                            <a class="call_btn" href="tel:+918652088618">
+                                <span><i class="fa-solid fa-phone" style="color: #ffffff;"></i>
+                                </span>CALL NOW
+                            </a>
+                            <a class="call_btn" href=" https://wa.me/+918652088618">
+                                <span><i class="fa-brands fa-whatsapp" style="color: #f0f0f0; font-weight: 600; font-size: 24px;"></i>
+                                </span>WHATSAPP NOW
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="row g-3">
+                        <div class="col-12 col-sm-6">
+                            <input type="text" class="form-control" placeholder="Your Name" style="height: 55px;">
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <input type="email" class="form-control" placeholder="Your Email" style="height: 55px;">
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <input type="text" class="form-control" placeholder="Your Mobile" style="height: 55px;">
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <select class="form-select" style="height: 55px;">
+                                <option selected>Choose Service</option>
+                                <option value="1">Service 1</option>
+                                <option value="2">Service 2</option>
+                                <option value="3">Service 3</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="date" id="date" data-target-input="nearest">
+                                <input type="text" class="form-control datetimepicker-input" placeholder="Choose Date"
+                                    data-target="#date" data-toggle="datetimepicker" style="height: 55px;">
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="time" id="time" data-target-input="nearest">
+                                <input type="text" class="form-control datetimepicker-input" placeholder="Choose Date"
+                                    data-target="#time" data-toggle="datetimepicker" style="height: 55px;">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <textarea class="form-control" rows="5" placeholder="Message"></textarea>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary w-100 py-3" type="submit">Book Appointment</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Appointment End -->
+
+
+    <!-- Testimonial Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h4 class="section-title">Testimonial</h4>
+                <h1 class="display-5 mb-4">Thousands Of Customers Who Trust Us And Our Services</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                <div class="testimonial-item text-center" <p class="fs-5"> Clita clita tempor justo dolor ipsum amet
+                    kasd amet duo justo duo duo labore sed
+                    sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at
+                    rebum
+                    justo sea clita.</p>
+                    <h3>Client Name</h3>
+                    <span class="text-primary">Profession</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-body footer mt-5 pt-5 px-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="text-light mb-4">Address</h3>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>RAWAL PADA, GANESH NAGAR, PANCHMUKH NIWAS, RM.NO - 303 MUMBAI - 400068
+                    </p>
+                    <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i>+91 8652088618 / 8286189832</p>
+                    <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>sabhajeetnv@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <!-- <a class="btn btn-square btn-outline-body me-1" href=""><i class="fab fa-twitter"></i></a> -->
+                        <a class="btn btn-square btn-outline-body me-1"
+                            href="https://www.facebook.com/SV DESIGEN STUDIO.interiors?mibextid=ZbWKwL"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <!-- <a class="btn btn-square btn-outline-body me-1" href=""><i class="fab fa-youtube"></i></a> -->
+                        <a class="btn btn-square btn-outline-body me-0"
+                            href="https://www.linkedin.com/company/SV DESIGEN STUDIO2019/about/"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="text-light mb-4">Services</h3>
+                    <!-- <a class="btn btn-link" href="">Architecture</a> -->
+                    <a >  3D Animation</a><br>
+                    <a >  House Planning</a><br>
+                    <a >  Interior Design</a>
+                    <!-- <a class="btn btn-link" href="">Construction</a> -->
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="text-light mb-4">Quick Links</h3>
+                    <a class="btn btn-link" href="about.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="service.html">Our Services</a>
+                    <!-- <a class="btn btn-link" href="">Terms & Condition</a>
+                    <a class="btn btn-link" href="">Support</a> -->
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="text-light mb-4">Newsletter</h3>
+                    <p>Sign Up to get updates & news about us . Get Latest Deals from Walker's Inbox to our mail address.</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text"
+                            placeholder="Your email">
+                        <button type="button"
+                            class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a>SV DESIGEN STUDIO</a>, All Right Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <!--/* This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. */-->
+                        Designed By <a href="https://htmlcodex.com">Phoenix</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- firebase config -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const loadEl = document.querySelector('#load');
+          // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+          // // The Firebase SDK is initialized and available here!
+          //
+          // firebase.auth().onAuthStateChanged(user => { });
+          // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+          // firebase.firestore().doc('/foo/bar').get().then(() => { });
+          // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+          // firebase.messaging().requestPermission().then(() => { });
+          // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+          // firebase.analytics(); // call to activate
+          // firebase.analytics().logEvent('tutorial_completed');
+          // firebase.performance(); // call to activate
+          //
+          // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+  
+          try {
+            let app = firebase.app();
+            let features = [
+              'auth', 
+              'database', 
+              'firestore',
+              'functions',
+              'messaging', 
+              'storage', 
+              'analytics', 
+              'remoteConfig',
+              'performance',
+            ].filter(feature => typeof app[feature] === 'function');
+            loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+          } catch (e) {
+            console.error(e);
+            loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+          }
+        });
+      </script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
 </body>
+
 </html>
