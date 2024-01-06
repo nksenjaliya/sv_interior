@@ -5,6 +5,12 @@
     --dark: #252525;
 }
 
+body,html{
+    overflow-x: hidden;
+}
+
+
+
 .c-img {
 
     width: 50%;
@@ -215,7 +221,7 @@ h6,
 @media (max-width: 768px) {
     .header-carousel .owl-carousel-item {
         position: relative;
-        min-height: 500px;
+        min-height: 700px;
     }
 
     .header-carousel .owl-carousel-item img {
@@ -692,7 +698,7 @@ img.logo {
 
 
 .wrapper {
-    margin: 10% auto;
+/*    margin: 10% auto;*/
     position: relative;
 }
 
@@ -1051,8 +1057,8 @@ img.logo {
 .step img {
     background: #fff;
     border: 1px solid #777;
-    padding: 19px;
-    width: 51%;
+/*    padding: 19px;*/
+/*    width: 25%;*/
     border-radius: 20%;
 }
 
@@ -1066,4 +1072,44 @@ a.call_btn {
 
 .fa-plus:before{
     color: black;
+}
+
+.row.row-wide {
+    margin-left: -35px;
+    margin-right: -35px;
+}
+
+.fadeInUp{
+    margin-top: 20px;
+}
+
+
+
+
+
+
+@media (max-width: 576px) {
+    .step img {
+        width: 50% !important;
+        padding: 10px !important;
+    }
+}
+
+.pl1{
+    font-size: 70px !important;
+}
+
+@media (max-width: 768px) {
+    .pl1{
+        /* padding-top: 26%; */
+        font-size: 30px !important;
+    }
+}    
+
+
+@media (max-width: 576px) {
+    .pl1{
+        /* padding-top: 70%; */
+        font-size: 30px !important;
+    }
 }
