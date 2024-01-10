@@ -1113,3 +1113,34 @@ a.call_btn {
         font-size: 30px !important;
     }
 }
+
+
+
+
+
+
+.category-content{
+    margin-left: 14px !important;
+}
+
+.upstudy-category-section-03 .category-item .category-icon {
+    line-height: 68px !important;
+    background: #f7efff !important;
+}
+
+.category-icon img{
+    height: 40px;
+}
+
+.lp{
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.row:hover .lp{
+    border: 1px solid blue;
+}
+
+.pk img{
+    height: 10px;
+}
